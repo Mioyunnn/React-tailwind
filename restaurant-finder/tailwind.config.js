@@ -10,7 +10,8 @@ export default {
         '10vh': '10vh'
       },
       colors: {
-        'food-yellow': '#F9BF63'
+        'food-yellow': '#F9BF63',
+        'food-red':'#FF4646'
       },
       fontFamily: {
         'Caveat': '"Caveat", serif'
