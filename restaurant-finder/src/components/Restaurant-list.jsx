@@ -4,9 +4,9 @@ import { FaShare } from "react-icons/fa";
 
 function RestaurantList() {
     return(
-        <main className="relative p-12">
-            <div className="bg-food-yellow rounded-2xl h-screen overflow-y-auto">
-                <div className="p-4 ">
+        <main className=" p-12">
+            <div className="bg-food-yellow rounded-2xl h-screen">
+                <div className="p-4 h-screen overflow-y-auto">
                     <div className="flex mt-6 justify-between">
                         <img className="mx-6 px-6 border-l-4 border-solid border-yellow-800" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Square_200x200.png" alt="restaurant-pic" />
                         <div className="flex w-full">
@@ -20,7 +20,7 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
@@ -65,7 +65,7 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
@@ -110,7 +110,7 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
@@ -155,7 +155,7 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
@@ -200,7 +200,7 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
@@ -245,12 +245,12 @@ function RestaurantList() {
                                             <div className="justify-between mb-2 items-center">
                                                 <span className="px-1 mx-1">4.9 顆星</span>
                                                 <span className="px-1 mx-1">1000 評論</span>
-                                                <span className="px-1 mx-1">營業中</span>
+                                                <span className="px-1 mx-1 text-green-600">營業中</span>
                                             </div>
                                             <div>
                                                 <span className="px-1 mx-1">早餐</span>
                                                 <span className="px-1 mx-1">0$-200$</span>
-                                                <span className="px-1 mx-1">Menu</span>
+                                                <span className="px-1 mx-1 ">Menu</span>
                                             </div>
                                         </div>
                                         <div>

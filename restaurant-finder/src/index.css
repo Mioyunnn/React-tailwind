@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +25,7 @@
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    background-color: #F9BF63;
+    background-color: #ca301c;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
@@ -32,3 +34,22 @@
     border-right: 4px solid #F9BF63;
     border-radius: 10px;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #F9BF63;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF6347;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #ca301c;
+  }
