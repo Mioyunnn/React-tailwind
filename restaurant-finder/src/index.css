@@ -20,18 +20,18 @@
     height: 6px;
 }
 .scrollbar-custom::-webkit-scrollbar-thumb {
-    background-color: #FF6347;
+    background-color: #D2E4AA;
     border-radius: 10px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    background-color: #ca301c;
+    background-color: #91AE65;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
     background-color: #FFF;
-    border-left: 4px solid #F9BF63;
-    border-right: 4px solid #F9BF63;
+    border-left: 4px solid #1E5230;
+    border-right: 4px solid #1E5230;
     border-radius: 10px;
 }
 /* width */
@@ -41,15 +41,24 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #F9BF63;
+    background: #1E5230;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #FF6347;
+    background-color: #D2E4AA;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #ca301c;
+    background-color: #91AE65;
+  }
+
+  @keyframes expand {
+    0%{
+      padding: 2rem;
+    }
+    100%{
+      padding: 4rem;
+    }
   }

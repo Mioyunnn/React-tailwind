@@ -10,8 +10,10 @@ export default {
         '10vh': '10vh'
       },
       colors: {
-        'food-yellow': '#F9BF63',
-        'food-red':'#FF4646'
+        'food-darkgreen': '#1E5230',
+        'food-green':'#0F7B1F',
+        'food-slightgreen':'#91AE65',
+        'food-bitgreen':'#D2E4AA'
       },
       fontFamily: {
         'Caveat': '"Caveat", serif'
@@ -19,6 +21,9 @@ export default {
       borderRadius: {
         '4xl':'2rem'
       },
+      boxShadow: {
+        'card':'0 1px 6px rgba(0, 0, 0, 0.2)'
+      }
     },
   },
   plugins: [],
