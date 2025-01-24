@@ -9,8 +9,6 @@ function App() {
         <>
             <Navbar />
             <LocationSearch />
-            <Condition />
-            <RestaurantList />
         </>
     )
 }
