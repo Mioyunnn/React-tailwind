@@ -6,7 +6,7 @@ function RestaurantList( { restaurants }) {
     return (
         <main className="p-6 sm:p-12">
             <div className="bg-food-bitgreen rounded-2xl h-screen shadow-card overflow-y-auto">
-                {restaurants.length === 0 ? (<p>目前沒有搜尋結果。</p>) : 
+                {restaurants.length === 0 ? (<p className="p-12 text-3xl">目前沒有搜尋結果。</p>) : 
                 (
                     restaurants.map((restaurant, index) => (
                         <div key={index} className="flex mt-4 justify-between shadow-card rounded-2xl p-3">
