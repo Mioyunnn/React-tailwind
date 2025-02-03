@@ -1,7 +1,7 @@
 import React, { useState }from "react";
 import { FaSearch } from "react-icons/fa";
 import RestaurantList from "./Restaurant-list";
-import Condition from "./Condition";
+import Condition from "./Filter";
 
 function LocationSearch() {
 
@@ -141,6 +141,7 @@ function LocationSearch() {
                     "Gastropub": "美食酒吧",
                     "Breakfast Spot": "早餐",
                     "English Restaurant": "複合式餐點",
+                    "Steakhouse": "牛排店"
             };
 
             // 如果有對應的自訂名稱，則替換；否則保留原名稱
@@ -186,19 +187,18 @@ function LocationSearch() {
     return (
         <div>
             <header className="flex flex-col items-center m-0 sm:m-12">
-                <h1 className="hidden m-10 md:text-6xl sm:block text-5xl text-nowrap">讓我們幫您尋找餐廳。</h1>
+                <h1 className="hidden m-10 p-4 md:text-6xl sm:block select-none text-5xl text-nowrap relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-95">讓我們幫您尋找餐廳。</h1>
                 <div className="m-10 flex justify-center w-full">
-                    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="輸入您的目的地..." className="h-20 mx-4 p-4 rounded-4xl border-4 border-solid border-food-slightgreen w-4/5 max-w-2xl text-2xl outline-none"/>
-                    <button className="bg-food-slightgreen hover:bg-food-green transition mx-5 p-6 px-8 rounded-4xl" onClick={handleSearch}>
-                        <FaSearch />
+                    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="輸入您的目的地..." className="h-20 mx-4 p-4 rounded-4xl border-4 border-solid border-food-slightgreen hover:border-food-green transition w-4/5 max-w-2xl text-2xl outline-none"/>
+                    <button class="group relative items-center justify-center overflow-hidden rounded-4xl border-food-slightgreen bg-food-slightgreen mx-2 px-8 py-6 text-2xl text-black transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]" onClick={handleSearch}>
+                        <FaSearch /></button>
+                    <button className="group relative items-center justify-center overflow-hidden rounded-4xl border-food-slightgreen bg-food-slightgreen mx-2 px-8 py-6 text-2xl text-black transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]" onClick={increaseStore}>
+                        更多...
                     </button>
                 </div>
             </header>
             <Condition />
             <RestaurantList restaurants={results} />
-            <button className="bg-blue-500 hover:bg-blue-600 text-white transition px-6 py-3 rounded-xl"
-                onClick={increaseStore}>
-            </button>
         </div>
     )
 }

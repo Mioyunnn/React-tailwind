@@ -5,11 +5,11 @@ import { FaShare } from "react-icons/fa";
 function RestaurantList( { restaurants }) {
     return (
         <main className="p-6 sm:p-12">
-            <div className="bg-food-bitgreen rounded-2xl h-screen shadow-card overflow-y-auto">
+            <div className="bg-food-bitgreen rounded-2xl h-screen shadow-card overflow-y-auto overflow-x-hidden">
                 {restaurants.length === 0 ? (<p className="p-12 text-3xl">目前沒有搜尋結果。</p>) : 
                 (
                     restaurants.map((restaurant, index) => (
-                        <div key={index} className="flex mt-4 justify-between shadow-card rounded-2xl p-3">
+                        <div key={index} className="flex mt-4 mx-4 justify-between shadow-card rounded-2xl p-3 hover:scale-105 transition">
                         <img className="mx-6 px-6 border-l-4 border-solid border-food-slightgreen hidden sm:block" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Square_200x200.png" alt="restaurant-pic" />
                         <div className="flex w-full">
                             <div className="flex flex-col justify-between w-full">
