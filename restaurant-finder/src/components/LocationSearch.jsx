@@ -1,7 +1,7 @@
 import React, { useState }from "react";
 import { FaSearch } from "react-icons/fa";
 import RestaurantList from "./Restaurant-list";
-import Condition from "./Filter";
+import Filter from "./Filter";
 
 function LocationSearch() {
 
@@ -141,7 +141,9 @@ function LocationSearch() {
                     "Gastropub": "美食酒吧",
                     "Breakfast Spot": "早餐",
                     "English Restaurant": "複合式餐點",
-                    "Steakhouse": "牛排店"
+                    "Steakhouse": "牛排店",
+                    "Karaoke Bar": "KTV",
+                    "Beer Bar": "啤酒屋"
             };
 
             // 如果有對應的自訂名稱，則替換；否則保留原名稱
@@ -197,7 +199,7 @@ function LocationSearch() {
                     </button>
                 </div>
             </header>
-            <Condition />
+            <Filter restaurants={results}/>
             <RestaurantList restaurants={results} />
         </div>
     )
