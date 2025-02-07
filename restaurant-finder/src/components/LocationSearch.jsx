@@ -11,6 +11,8 @@ function LocationSearch() {
     const [error, setError] = useState("");
     const [radius, setRadius] = useState(1000); // 預設搜尋半徑：1 公里
     const [limit, setLimit] = useState(10); // 預設搜尋店家: 20 間
+    const [buttonText, setButtonText] = useState(""); // 預設按鈕文字為空字串。
+    const [isVisible, setIsVisible] = useState(true); // 預設restaurant-list看得見。
 
 
     async function geocodeAddress(address) {
@@ -191,7 +193,7 @@ function LocationSearch() {
             <header className="flex flex-col items-center m-0 sm:m-12">
                 <h1 className="hidden m-10 p-4 md:text-6xl sm:block select-none text-5xl text-nowrap relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-95">讓我們幫您尋找餐廳。</h1>
                 <div className="m-10 flex justify-center w-full">
-                    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="輸入您的目的地..." className="h-20 mx-4 p-4 rounded-4xl border-4 border-solid border-food-slightgreen hover:border-food-green transition w-4/5 max-w-2xl text-2xl outline-none"/>
+                    <input type="text" inputMode="search" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="輸入您的目的地..." className="h-20 mx-4 p-4 rounded-4xl border-4 border-solid border-food-slightgreen hover:border-food-green transition w-4/5 max-w-2xl text-2xl outline-none"/>
                     <button class="group relative items-center justify-center overflow-hidden rounded-4xl border-food-slightgreen bg-food-slightgreen mx-2 px-8 py-6 text-2xl text-black transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]" onClick={handleSearch}>
                         <FaSearch /></button>
                     <button className="group relative items-center justify-center overflow-hidden rounded-4xl border-food-slightgreen bg-food-slightgreen mx-2 px-8 py-6 text-2xl text-black transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]" onClick={increaseStore}>
@@ -199,8 +201,8 @@ function LocationSearch() {
                     </button>
                 </div>
             </header>
-            <Filter restaurants={results}/>
-            <RestaurantList restaurants={results} />
+            <Filter restaurants={results} buttonText = {buttonText} setIsVisible = { setIsVisible } isVisible = {isVisible}/>
+            <RestaurantList restaurants={results} setButtonText = {setButtonText} isVisible = {isVisible}/>
         </div>
     )
 }

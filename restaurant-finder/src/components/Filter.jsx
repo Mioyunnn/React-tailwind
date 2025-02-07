@@ -1,6 +1,14 @@
 import { FaFilter } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
 
+
+function handleFilter(event , { buttonText , setIsVisible , isVisible }) {
+    if(event.target.innerText === buttonText) {
+        setIsVisible(!isVisible)
+    }
+}
+
+
 function Filter({ restaurants }) {
     return (
         <div className="items-center justify-around p-6 hidden sm:flex">
@@ -14,7 +22,7 @@ function Filter({ restaurants }) {
                 (
                     restaurants.map((restaurant, index) => (
                         <div key={index} className="mx-4">
-                          <button className="text-xl bg-food-green p-4 px-8 w-full h-full rounded-4xl flex items-center text-white"><FaCheck className="mr-4 text-white"/>{restaurant.category}</button>
+                          <button className="text-xl bg-food-green p-4 px-8 w-full h-full rounded-4xl flex items-center text-white" onClick={handleFilter}><FaCheck className="mr-4 text-white"/>{restaurant.category}</button>
                         </div>
                     ))
                 )}
