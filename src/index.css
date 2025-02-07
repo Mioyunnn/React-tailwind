@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans TC", serif;
+    font-weight: 500;
+}
+
+.scrollbar-custom {
+    width: 2px;
+}
+.scrollbar-custom::-webkit-scrollbar{
+    width: 10px;
+    height: 6px;
+}
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #D2E4AA;
+    border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: #91AE65;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background-color: #FFF;
+    border-left: 4px solid #1E5230;
+    border-right: 4px solid #1E5230;
+    border-radius: 10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #D2E4AA;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #1E5230;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #91AE65;
+  }
+
+  @keyframes expand {
+    0%{
+      padding: 2rem;
+    }
+    100%{
+      padding: 4rem;
+    }
+  }
