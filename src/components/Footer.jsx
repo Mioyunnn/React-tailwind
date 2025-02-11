@@ -29,13 +29,13 @@ function Footer() {
                 </div>
                 <div className="m-4 mr-16">
                     <div className="flex flex-col items-center">
-                        <span>&copy; Mioyunnn </span>
-                        <span>Power by Foursquare & OpenStreetMap & Nominatim</span>
+                        <span className="text-sm md:text-l">&copy; Mioyunnn </span>
+                        <span className="text-sm md:text-l">Power by Foursquare & OpenStreetMap & Nominatim</span>
                     </div>
                 </div>
                 <div className="m-4">
                     <a href="https://github.com/Mioyunnn">
-                        <FaGithub className="text-3xl cursor-pointer hover:scale-125 hover:rotate-360 transition"/>
+                        <FaGithub className="cursor-pointer hover:scale-125 hover:rotate-360 transition text-3xl"/>
                     </a>
                 </div>
             </div>
