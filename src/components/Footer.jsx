@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 function Footer() {
     return(
         <>
-            <div className="flex items-center justify-between bg-slate-200">
+            <div className="flex items-center justify-between bg-slate-200 ">
                 <div className="m-4" >
                     <h3 className="text-2xl font-extrabold font-Caveat group relative overflow-hidden bg-transparent px-4 text-neutral-950">
                         <span className="relative inline-flex select-none">

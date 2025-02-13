@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
+import Content from './Content.jsx'
+import { AnimatePresence } from "framer-motion";
+
 
 function Navbar() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    function handleContent() {
+        setIsContentVisible((prev) => !prev);
+    }
+    
     return(
+        
     <nav className="sticky w-full top-0 z-50">
         <div className="h-20 flex bg-food-darkgreen justify-between items-center sm:h-20vh"> 
             <div className="mx-12">
@@ -29,8 +40,15 @@ function Navbar() {
                     </span>
                 </h1>
             </div>
-            <TiThMenu className="mx-8 text-3xl text-white cursor-pointer"/>
+            <TiThMenu className="mx-8 text-3xl text-white cursor-pointer transition" onClick = {handleContent}/>
         </div>
+
+            {/* AnimatePresence 需確保 Content 在狀態變更時執行 exit */}
+        <AnimatePresence>
+            {isContentVisible && (
+                <Content onClose={() => setIsContentVisible(false)} />
+            )}
+        </AnimatePresence>
     </nav>
     )
 }
