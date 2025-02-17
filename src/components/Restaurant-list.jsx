@@ -5,7 +5,7 @@ import { FaShare } from "react-icons/fa";
 function RestaurantList( { restaurants , buttonText }) {
     return (
         <main className="p-6 sm:p-12 h-screen">
-            <div className="bg-food-bitgreen rounded-2xl h-auto max-h-full shadow-card overflow-y-visible overflow-x-hidden">
+            <div className="bg-food-bitgreen rounded-2xl h-auto max-h-full shadow-card overflow-y-scroll overflow-x-hidden">
                 {restaurants.length === 0 ? (<p className="p-12 text-3xl">目前沒有搜尋結果。</p>) : 
                 (
                     restaurants //篩選與Filter按鈕不同的

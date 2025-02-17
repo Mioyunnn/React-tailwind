@@ -7,6 +7,7 @@ function Filter({ restaurants , buttonText , setButtonText }) {
         setButtonText((prev) => (prev === category ? null : category));
 
     }
+    const uniqueCategories = [...new Set(restaurants.map(restaurant => restaurant.category))]; // 防止一樣的category出現 使用set
     return (
         <div className="items-center justify-around p-6 hidden sm:flex">
             <div className="flex-[1] basis-1/10 mx-2 flex mb-2 border-r-food-green border-solid border-r-4 justify-center items-center">
@@ -17,9 +18,10 @@ function Filter({ restaurants , buttonText , setButtonText }) {
             <div className="flex-[9] basis-9/10 mx-4 flex justify-around whitespace-nowrap overflow-x-auto pb-2 scrollbar-custom">
                 {restaurants.length === 0 ? ("") : 
                 (
-                    restaurants.map((restaurant, index) => (
+                    
+                    uniqueCategories.map((category, index) => (
                         <div key={index} className="mx-4">
-                          <button className="text-xl bg-food-green p-4 px-8 w-full h-full rounded-4xl flex items-center text-white" onClick={() => handleFilter(restaurant.category)}><FaCheck className="mr-4 text-white"/>{restaurant.category}</button>
+                          <button className="text-xl bg-food-green p-4 px-8 w-full h-full rounded-4xl flex items-center text-white" onClick={() => handleFilter(category)}><FaCheck className="mr-4 text-white"/>{category}</button>
                         </div>
                     ))
                 )}

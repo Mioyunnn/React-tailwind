@@ -78,7 +78,8 @@ function LocationSearch() {
              "Preschool", "Historic and Protected Site",
              "Flea Market", "Campground",
              "Pet Supplies Store", "Hotel", 
-             "Buddhist Temple", "Lounge"]; // 不想顯示的類別
+             "Buddhist Temple", "Lounge",
+             "Food and Beverage Service", ""]; // 不想顯示的類別
             return data.results
 
             .filter((place) => {
@@ -146,7 +147,8 @@ function LocationSearch() {
                     "Steakhouse": "牛排店",
                     "Karaoke Bar": "KTV",
                     "Beer Bar": "啤酒屋",
-                    "Shabu-Shabu Restaurant": "涮涮鍋"
+                    "Shabu-Shabu Restaurant": "涮涮鍋",
+                    "Ramen Restaurant": "拉麵店"
             };
 
             // 如果有對應的自訂名稱，則替換；否則保留原名稱
